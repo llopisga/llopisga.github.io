@@ -1,0 +1,49 @@
+# Build settings
+gems:
+  - jemoji
+  - jekyll-paginate
+
+# Site settings
+title: "llopisga"
+description: > # this means to ignore newlines until "email:"
+   A technology hobbyist passionate about cloud computing state-of-the-art and innovation
+
+email: raullg8@gmail.com
+#blog logo
+logo: "/assets/images/favicon.png"
+float_logo: true # true, false (default)
+
+# blog cover
+cover: "/assets/images/bg.jpg"
+
+name: 'Raúl Llopis Gandía'
+author: 'Raúl Llopis Gandía'
+author_image: "/assets/images/avatar.png"
+
+paginate:	5
+
+url: "https://llopisga.github.io" # the base hostname & protocol for your site
+baseurl: ""
+#used to display twitter cards
+# twitter_handle: '@NAME'
+
+#fill in disqus shortname to use disqus
+#disqus: disqus-shortname
+
+google_analytics: UA-188415508-2
+
+# social icons and sharing options
+social:
+  - icon:	linkedin-in
+    url:	https://www.linkedin.com/in/llopisga/
+    desc: Follow me on Linekdin
+    share_url: 
+    share_title: 
+    share_link: 
+
+  - icon:	github
+    url:	https://github.com/llopisga
+    desc: 	Fork me on github
+    share_url:
+    share_title:
+    share_link:
