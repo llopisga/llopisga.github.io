@@ -20,7 +20,14 @@ name: 'Raúl Llopis Gandía'
 author: 'Raúl Llopis Gandía'
 author_image: "/assets/images/avatar.png"
 
+about_title: "About"
+about_description: >
+   About me
+
+future: true
+
 paginate:	5
+paginate_path: "/blog/5/"
 
 url: "https://llopisga.github.io" # the base hostname & protocol for your site
 baseurl: ""
