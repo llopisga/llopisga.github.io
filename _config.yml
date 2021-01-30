@@ -24,11 +24,11 @@ author_image: "/assets/images/avatar.png"
 
 about_title: "About"
 about_description: >
-   About me
+   /dev/null
 
 projects_title: "Projects"
 projects_description: >
-   List of projects
+   List of my projects
 
 future: true
 
@@ -47,7 +47,7 @@ google_analytics: UA-188415508-2
 
 # social icons and sharing options
 social:
-  - icon:	linkedin-in
+  - icon:	linkedin
     url:	https://www.linkedin.com/in/llopisga/
     desc: Follow me on Linekdin
     share_url: 

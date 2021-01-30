@@ -30,17 +30,20 @@ layout: default
     <a href={{ "/blog/" | prepend: site.baseurl }}>Blog</a>
   </div>
 
-  <h1 class="blog-title">{{ site.about_title }}</h1>
+  <h1 class="index-headline blog-title">{{ site.about_title }}</h1>
   </br>
   <h3 class="blog-description">{{ site.about_description }}</h3>
-
+  <a href="https://en.wikipedia.org/wiki/Null_device"><img
+      class="card-background"
+      style="border-radius: 5%; display: block; margin-left: auto; margin-right: auto; width: 100%;"
+      src="/assets/images/null.jpg"" alt=" devnull"></a>
 
 
   <h1 class="blog-title">{{ site.projects_title }}</h1>
   </br>
   <h3 class="blog-description">{{ site.projects_description }}</h3>
 
-  {% assign public_repositories = site.github.public_repositories | where:'fork', false | sort: 'stargazers_count' | reverse %}
+  {% assign public_repositories = site.github.public_repositories | where:'fork', false | sort: 'stargazers_count' %}
   {% for repository in public_repositories limit: 9 %}
   <a style="text-decoration:none;color:inherit;" href="{{ repository.html_url }}">
     <div class="card card-background">
@@ -54,9 +57,6 @@ layout: default
   </a>
   </br>
   {% endfor %}
-
-
-
 
 
 </header>
