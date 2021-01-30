@@ -126,6 +126,8 @@ GEM
     jekyll-github-metadata (2.13.0)
       jekyll (>= 3.4, < 5.0)
       octokit (~> 4.0, != 4.4.0)
+    jekyll-material-theme (0.4.0)
+      jekyll (~> 3.5)
     jekyll-mentions (1.6.0)
       html-pipeline (~> 2.3)
       jekyll (>= 3.7, < 5.0)
@@ -264,6 +266,7 @@ PLATFORMS
 DEPENDENCIES
   bourbon
   github-pages
+  jekyll-material-theme
   jemoji
 
 BUNDLED WITH

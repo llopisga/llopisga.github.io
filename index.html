@@ -3,34 +3,60 @@ layout: default
 ---
 
 <div class="teaserimage">
-    <div class="teaserimage-image" {% if site.cover %}style="background-image: url({{ site.cover | prepend: site.baseurl }})"{% endif %}>
-        Teaser Image
-    </div>
+  <div class="teaserimage-image" {% if site.cover
+    %}style="background-image: url({{ site.cover | prepend: site.baseurl }})" {% endif %}>
+    Teaser Image
+  </div>
 </div>
 
 <header class="blog-header">
-    {% if site.logo %}
-      <a class="blog-logo" href="{{site.url}}{{site.baseurl}}" style="background-image: url('{{ site.author_image | prepend: site.baseurl }}')">{{ site.title }}</a>
+  {% if site.logo %}
+  <a class="blog-logo" href="{{site.url}}{{site.baseurl}}"
+    style="background-image: url('{{ site.author_image | prepend: site.baseurl }}')">{{ site.title }}</a>
+  {% endif %}
+  <h1 class="blog-title">{{ site.name }}</h1>
+  </br>
+  <h2 class="blog-description">{{ site.description }}</h2>
+  <div class="custom-links">
+    {% for social in site.social %}
+    {% if social.url %}
+    <a class="icon-{{ social.icon }}" href="{{ social.url }}" {% if social.desc %} title="{{ social.desc }}" {% endif
+      %}">
+      <i class="fa fa-{{ social.icon }}"></i>
+    </a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
     {% endif %}
-    <h1 class="blog-title">{{ site.name }}</h1>
-    </br>
-    <h2 class="blog-description">{{ site.description }}</h2>
-    <div class="custom-links">
-      {% for social in site.social %}
-        {% if social.url %}
-            <a class="icon-{{ social.icon }}" href="{{ social.url }}" {% if social.desc %} title="{{ social.desc }}"{% endif %}">
-              <i class="fa fa-{{ social.icon }}"></i>
-            </a>
-            &nbsp;&nbsp;·&nbsp;&nbsp;
-        {% endif %}
-      {% endfor %}
-      <a href={{ "/blog/" | prepend: site.baseurl }}>Blog</a>
-    </div>
+    {% endfor %}
+    <a href={{ "/blog/" | prepend: site.baseurl }}>Blog</a>
+  </div>
 
-    <h1 class="blog-title">{{ site.about_title }}</h1>
-    </br>
-    <h3 class="blog-description">{{ site.about_description }}</h3>
-    
+  <h1 class="blog-title">{{ site.about_title }}</h1>
+  </br>
+  <h3 class="blog-description">{{ site.about_description }}</h3>
+
+
+
+  <h1 class="blog-title">{{ site.projects_title }}</h1>
+  </br>
+  <h3 class="blog-description">{{ site.projects_description }}</h3>
+
+  {% assign public_repositories = site.github.public_repositories | where:'fork', false | sort: 'stargazers_count' | reverse %}
+  {% for repository in public_repositories limit: 9 %}
+  <a style="text-decoration:none;color:inherit;" href="{{ repository.html_url }}">
+    <div class="card card-background">
+      <div class="card-header">
+        <h3 class="card-title">{{ repository.name }}</h2>
+      </div>
+      <div class="card-description">
+        <p>{{ repository.description }}</p>
+      </div>
+    </div>
+  </a>
+  </br>
+  {% endfor %}
+
+
+
 
 
 </header>

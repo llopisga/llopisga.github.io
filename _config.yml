@@ -2,6 +2,8 @@
 gems:
   - jemoji
   - jekyll-paginate
+  - jekyll-github-metadata
+
 
 # Site settings
 title: "llopisga"
@@ -23,6 +25,10 @@ author_image: "/assets/images/avatar.png"
 about_title: "About"
 about_description: >
    About me
+
+projects_title: "Projects"
+projects_description: >
+   List of projects
 
 future: true
 
